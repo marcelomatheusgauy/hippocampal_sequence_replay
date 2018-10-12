@@ -1,7 +1,6 @@
 # This file is made by Marcelo Gauy and is based on
 # simulation code from Litwin-Kumar 2014.
 
-### There seems to be a mistake in Haffi's code in the Ni/2 terms down below, most likely they should have been Ni/3
 using Distributions
 
 # 1. We model l balanced units (simulation.jl corresponds to one balanced unit/simulation4.jl corresponds to 2 balanced units)
