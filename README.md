@@ -3,24 +3,18 @@ A hippocampal model for behavioral time acquisition and fast bidirectional repla
 
 This github project contains the codes used in the simulations of the paper: A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences. We make the codes public, so the results obtained can be reproduced. In the following, I explain the file structure:
 
-turn_ext_inhibition_off_trigger_detector_many_patterns.jl: To produce data corresponding to the encoding mode of the model run this file(julia); this simulates the model (encoding) with the parameters in parameters.jl (and those provided within the file itself), saves the data (in data folder) and produces a preliminary plot (in figures folder).
+sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl: To simulate the entire model just run this file(julia); this simulates the model (encoding including place and sequence cells) with the parameters in parameters.jl (and those provided within the file itself); after the encoding mode is finished, it simulates a single replay and reverse replay of place and sequence cells; the data is saved (in the data folder) and preliminary plots for encoding, replay and reverse replay are produced (in figures folder). We note that the data file produced is too large and we do not include a preliminary one in the data folder.
 
-synfiremode.jl: to produce data corresponding to forward replays run this file; this simulates the replay mode of the model, saves the data and produces a preliminary plot.
+parameters.jl: contains the basic neuronal parameters used. These are changed externally on convenience in the relevant files.
 
-reversalreplay.jl: to produce data corresponding to reverse replays run this file; this simulates the reverse replay mode of the model, saves the data and produces a preliminary plot.
+simulationsequencereplayencodingmode.jl: contains the function that actually implements the encoding mode of the model. Is called by sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl; Note that the random seed is fixed to ensure reproducibility.
 
-parameters.jl: contains the basic neuronal parameters used. These are changed externally on convenience in the relevant files; To remove dendritic spikes, just increase the parameter nmdaspikethreshold from 6.0 to any high value (say 600.0)
+simulationfastreplaymode.jl: contains the function that actually implements the forward replay mode of the model. Is called by sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl; Note that the random seed is fixed to ensure reproducibility.
 
-simulation5.jl: contains the function that actually implements the encoding mode of the model. Is called by turn_ext_inhibition_off_trigger_detector_many_patterns.jl;
+simulationreversereplay.jl: contains the function that actually implements the reverse replay of the model. Is called by sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl; Note that the random seed is fixed to ensure reproducibility.
 
-simulation6.jl: contains the function that actually implements the forward replay mode of the model. Is called by synfiremode.jl;
+aggregate_spike_statistics_over_time.jl, afferent_recurrent_neuron.jl and mousepathtocellpathsequence.jl are specific utility functions called when necessary.
 
-simulation8.jl: contains the function that actually implements the reverse replay of the model. Is called by reversalreplay.jl;
-
-aggregate_spike_statistics_over_time.jl and afferent_recurrent_neuron.jl are specific utility functions called when necessary.
-
-The load_scripts contain example codes the produce plots which look like some of the ones used in the paper.
-
-This still lacks the codes which include place cells. I will add those soon.
+loadscript_linear_loops.jl contains an example code which produces plots that look like the ones in the paper (Figure 1). Note that we do not provide the data file for the figures attached because it is too large; To get the data file, one must run sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl.
 
 In case of doubts please write to: marcelo.matheus@inf.ethz.ch
