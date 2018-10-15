@@ -17,4 +17,8 @@ aggregate_spike_statistics_over_time.jl, afferent_recurrent_neuron.jl and mousep
 
 loadscript_linear_loops.jl contains an example code which produces plots that look like the ones in the paper (Figure 1). Note that we do not provide the data file for the figures attached because it is too large; To get the data file, one must run sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl.
 
+The only_sequence_cells folder contains functions implementing simulations using only sequence cells. Those are generally simpler and faster. They are explained in the readme file there.
+
+The reduced_rate_model folder contains the matlab function implementing the rate model.
+
 In case of doubts please write to: marcelo.matheus@inf.ethz.ch
