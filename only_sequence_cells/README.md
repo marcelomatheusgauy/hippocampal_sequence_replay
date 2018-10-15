@@ -1,7 +1,6 @@
 # hippocampal_sequence_replay
-A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences
 
-This github project contains the codes used in the simulations of the paper: A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences. We make the codes public, so the results obtained can be reproduced. In the following, I explain the file structure:
+This subfolder contains the codes without simulating any place cell activity. Usually these are better to make tests, as they are simpler and faster. They are included here for completeness. Below is a brief description on how to run the files:
 
 turn_ext_inhibition_off_trigger_detector_many_patterns.jl: To produce data corresponding to the encoding mode of the model run this file(julia); this simulates the model (encoding) with the parameters in parameters.jl (and those provided within the file itself), saves the data (in data folder) and produces a preliminary plot (in figures folder).
 
@@ -20,7 +19,5 @@ simulation8.jl: contains the function that actually implements the reverse repla
 aggregate_spike_statistics_over_time.jl and afferent_recurrent_neuron.jl are specific utility functions called when necessary.
 
 The load_scripts contain example codes the produce plots which look like some of the ones used in the paper.
-
-This still lacks the codes which include place cells. I will add those soon.
 
 In case of doubts please write to: marcelo.matheus@inf.ethz.ch
