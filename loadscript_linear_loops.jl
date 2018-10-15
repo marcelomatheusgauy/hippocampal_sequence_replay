@@ -8,7 +8,7 @@ using PyPlot
 
 using JLD
 
-d = load("data/video_data_4.jld");
+d = load("data/video_data.jld");
 
 times = d["times"];
 ns = d["ns"];
