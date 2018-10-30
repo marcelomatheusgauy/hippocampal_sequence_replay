@@ -1,7 +1,7 @@
 # hippocampal_sequence_replay
 A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences
 
-This github project contains the codes used in the simulations of the paper: A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences (found at: https://www.biorxiv.org/content/early/2018/06/12/343988). We make the codes public, so the results obtained can be reproduced. In the following, I explain the file structure:
+This github project contains the codes used in the simulations of the paper: A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences (found at: https://www.biorxiv.org/content/early/2018/07/18/343988). We make the codes public, so the results obtained can be reproduced. In the following, I explain the file structure:
 
 Disclaimer: in general, to run the files just type 'julia filename' in the terminal, replacing filename by the intended file.
 
