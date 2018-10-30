@@ -1,9 +1,11 @@
 # hippocampal_sequence_replay
 A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences
 
-This github project contains the codes used in the simulations of the paper: A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences. We make the codes public, so the results obtained can be reproduced. In the following, I explain the file structure:
+This github project contains the codes used in the simulations of the paper: A hippocampal model for behavioral time acquisition and fast bidirectional replay of spatio-temporal memory sequences (found at: https://www.biorxiv.org/content/early/2018/06/12/343988). We make the codes public, so the results obtained can be reproduced. In the following, I explain the file structure:
 
-sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl: To simulate the entire model just run this file(julia); this simulates the model (encoding including place and sequence cells) with the parameters in parameters.jl (and those provided within the file itself); after the encoding mode is finished, it simulates a single replay and reverse replay of place and sequence cells; the data is saved (in the data folder) and preliminary plots for encoding, replay and reverse replay are produced (in figures folder). We note that the data file produced is too large and we do not include a preliminary one in the data folder.
+Disclaimer: in general, to run the files one just types 'julia filename' in the terminal, replacing filename by the intended file.
+
+sequencereplayencodingmode_fast_replay_animation_linear_track_loops.jl: To simulate the entire model just run this file; this simulates the model (encoding including place and sequence cells) with the parameters in parameters.jl (and those provided within the file itself); after the encoding mode is finished, it simulates a single replay and reverse replay of place and sequence cells; the data is saved (in the data folder) and preliminary plots for encoding, replay and reverse replay are produced (in figures folder). We note that the data file produced is too large and we do not include a preliminary one in the data folder.
 
 parameters.jl: contains the basic neuronal parameters used. These are changed externally on convenience in the relevant files.
 
